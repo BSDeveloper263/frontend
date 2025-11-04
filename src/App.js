@@ -1,25 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+// import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+// // import Login from "./component/login2/login";
+// import Dashboard from "./component/Dashboard/Dashboard";
+
+
+// function App() {
+//   return (
+//     <Router>
+//       <Routes>
+        
+//         {/* <Route path="/" element={<Navigate to="/login" replace />} />
+
+  
+//         <Route path="/login" element={<Login />} /> */}
+//         <Route path="/Dashboard" element={<Dashboard />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+
+
+// import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+// import Dashboard from "./component/Dashboard/Dashboard";
+// import Login from "./component/login2/login";
+
+// function App() {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<Navigate to="/dashboard" replace />} />
+//         <Route path="/dashboard" element={<Dashboard />} />
+//         <Route path="/login" element={<Login />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Dashboard from "./component/Dashboard/Dashboard";
+import Login from "./component/login2/login";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Default route — agar login nahi hua hai to /login par bhej de */}
+        <Route path="/" element={<Navigate to="/login" />} />
+
+        {/* Login Page */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Dashboard (main layout) */}
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
