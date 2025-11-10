@@ -28,6 +28,14 @@ import Paragraph from "../Html/Paragraph";
 import Link from "../Html/Link";
 import Style from "../Html/Style";
 import Formatting from "../Html/Formatting";
+import CSS from "../Html/CSS";
+import Color from "../Html/Color"
+import RGB  from "../Html/RGB"
+import Hex from "../Html/Hex";
+import Hsl from "../Html/Hsl";
+import Table from "../Html/Tables";
+import Tableborder from "../Html/Tableborder";
+
 
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
@@ -47,6 +55,13 @@ export default function DashboardLayout() {
     link: <Link />,
     style: <Style />,
     formatting: <Formatting />,
+    css:<CSS/>,
+    color:<Color/>,
+    rgb:<RGB/>,
+    hex:<Hex/>,
+    hsl:<Hsl/>,
+    table:<Table/>,
+    tableborder:<Tableborder/>
   };
 
   const dropdownMenu = (
@@ -161,6 +176,50 @@ export default function DashboardLayout() {
             <Menu.Item key="formatting" onClick={() => setActiveTopic("formatting")}>
               HTML Formatting
             </Menu.Item>
+
+             <Menu.Item key="css" onClick={() => setActiveTopic("css")}>
+              HTML  CSS
+            </Menu.Item>
+             
+
+             <SubMenu key=" Colors"
+            // icon={<Html5Outlined style={{ color: "#ff5722" }} />}
+            title={!collapsed && "  HTML Color"}>
+              <Menu.Item key="color" onClick={() => setActiveTopic("color")}>
+                 Color
+              </Menu.Item>
+
+              <Menu.Item key="rgb" onClick={() => setActiveTopic("rgb")}>
+                 RGB
+              </Menu.Item>
+               <Menu.Item key="hex" onClick={() => setActiveTopic("hex")}>
+                HEX
+              </Menu.Item>
+
+               <Menu.Item key="hsl" onClick={() => setActiveTopic("hsl")}>
+                HSL
+              </Menu.Item>
+              </SubMenu>
+             
+             <SubMenu key=" Tables"
+            // icon={<Html5Outlined style={{ color: "#ff5722" }} />}
+            title={!collapsed && "  HTML Tables"}>
+            
+             <Menu.Item key="table" onClick={() => setActiveTopic("table")}>
+                Table
+              </Menu.Item>
+              
+              <Menu.Item key="tableborder" onClick={() => setActiveTopic("tableborder")}>
+                Tableborder
+              </Menu.Item>
+
+
+             </SubMenu>
+
+
+
+
+
           </SubMenu>
 
           <SubMenu
