@@ -35,6 +35,11 @@ import Hex from "../Html/Hex";
 import Hsl from "../Html/Hsl";
 import Table from "../Html/Tables";
 import Tableborder from "../Html/Tableborder";
+import TableSize from "../Html/Tablesize";
+import Tableheader from "../Html/Tableheader";
+import PaddingSpacing from "../Html/Paddingspacing";
+import ColspanRowspan from "../Html/ColspanRowspan";
+import TableStyling from "../Html/Tablestyling";
 
 
 const { Header, Sider, Content } = Layout;
@@ -61,7 +66,12 @@ export default function DashboardLayout() {
     hex:<Hex/>,
     hsl:<Hsl/>,
     table:<Table/>,
-    tableborder:<Tableborder/>
+    tableborder:<Tableborder/>,
+    tablesize:<TableSize/>,
+    tableheader:<Tableheader/>,
+    PaddingSpacing:<PaddingSpacing/>,
+    colspanrowspan:<ColspanRowspan/>,
+    tableStylingt:<TableStyling/>
   };
 
   const dropdownMenu = (
@@ -213,6 +223,27 @@ export default function DashboardLayout() {
                 Tableborder
               </Menu.Item>
 
+              <Menu.Item key="tablesize" onClick={() => setActiveTopic("tablesize")}>
+                Table size
+              </Menu.Item>
+
+               <Menu.Item key="tableheader" onClick={() => setActiveTopic("tableheader")}>
+                Table Header
+              </Menu.Item>
+
+               <Menu.Item key="PaddingSpacing" onClick={() => setActiveTopic("PaddingSpacing")}>
+                Padding & Spacing
+              </Menu.Item>
+
+               <Menu.Item key="colspanrowspan" onClick={() => setActiveTopic("colspanrowspan")}>
+               Colspan & Rowspan
+              </Menu.Item>
+
+              <Menu.Item key="tableStylingt" onClick={() => setActiveTopic("tableStylingt")}>
+               Table Stylingt
+              </Menu.Item>
+
+ tableStylingt
 
              </SubMenu>
 
