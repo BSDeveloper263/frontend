@@ -40,6 +40,29 @@ import Tableheader from "../Html/Tableheader";
 import PaddingSpacing from "../Html/Paddingspacing";
 import ColspanRowspan from "../Html/ColspanRowspan";
 import TableStyling from "../Html/Tablestyling";
+import Colorgroup from "../Html/Colorgroup"
+import List from "../Html/List"
+import UnorderList from "../Html/UnorderLists";
+import OrderLists from "../Html/OrderLists";
+import HtlmBlock from "../Html/Block & Inline ";
+import Div from "../Html/Div";
+import Class from "../Html/Class";
+import Id from "../Html/Id";
+import Iframes from "../Html/Iframes";
+import JavaScript  from "../Html/JavaScript";
+import Filepaths from "../Html/File Paths"
+import Head from "../Html/Head";
+import HtmlLayout from "../Html/HtmlLayout";
+import Responsive from "../Html/Responsive"
+import Semantic from "../Html/Semantic";
+import Form from "../Html/Form";
+import FormAttribute from "../Html/Form Attribute"
+import FormElement from "../Html/Form Element";
+import InputType from "../Html/Input Type";
+import InputAttributes from "../Html/Input Attributes"
+import Canvas from "../Html/Canvas"
+
+
 
 
 const { Header, Sider, Content } = Layout;
@@ -59,7 +82,7 @@ export default function DashboardLayout() {
     paragraph: <Paragraph />,
     link: <Link />,
     style: <Style />,
-    formatting: <Formatting />,
+    formatting: <Formatting/>,
     css:<CSS/>,
     color:<Color/>,
     rgb:<RGB/>,
@@ -71,7 +94,31 @@ export default function DashboardLayout() {
     tableheader:<Tableheader/>,
     PaddingSpacing:<PaddingSpacing/>,
     colspanrowspan:<ColspanRowspan/>,
-    tableStylingt:<TableStyling/>
+    tableStylingt:<TableStyling/>,
+    colorgroup:<Colorgroup/>,
+    list:<List/>,
+    unorderlist:<UnorderList/>,
+    orderlist:<OrderLists/>,
+    htmlblock :<HtlmBlock/>,
+    div:<Div/>,
+    class:<Class/>,
+    id:<Id/>,
+    iframes:<Iframes/>,
+    JavaScript:<JavaScript/>,
+    Filepaths:<Filepaths/>,
+    head:<Head/>,
+    htmlayout:<HtmlLayout/>,
+    responsive:<Responsive/>,
+    semantic:<Semantic/>,
+    form:<Form/>,
+    formattribute:<FormAttribute/>,
+    formelement:<FormElement/>,
+    inputtype:<InputType/>,
+    inputattributes:<InputAttributes/>,
+    canvas:<Canvas/>,
+    
+     
+  
   };
 
   const dropdownMenu = (
@@ -160,7 +207,7 @@ export default function DashboardLayout() {
             </Menu.Item>
 
             <Menu.Item key="attribute" onClick={() => setActiveTopic("attribute")}>
-              HTML Attributes
+              HTML attributes
             </Menu.Item>
 
             <Menu.Item key="headings" onClick={() => setActiveTopic("headings")}>
@@ -243,15 +290,114 @@ export default function DashboardLayout() {
                Table Stylingt
               </Menu.Item>
 
- tableStylingt
-
+               <Menu.Item key="colorgroup  " onClick={() => setActiveTopic("colorgroup")}>
+                 Table Colorgroup
+              </Menu.Item>
              </SubMenu>
+   
+
+              <SubMenu key=" HTML List"
+            // icon={<Html5Outlined style={{ color: "#ff5722" }} />}
+            title={!collapsed && "  HTML List"}>
+              
+                <Menu.Item key="list " onClick={() => setActiveTopic("list")}>
+                List
+              </Menu.Item>
+
+                <Menu.Item key="unorderlist " onClick={() => setActiveTopic("unorderlist")}>
+                Unorder List
+              </Menu.Item>
+
+               <Menu.Item key="orderlist " onClick={() => setActiveTopic("orderlist")}>
+               Order List
+              </Menu.Item>
+              
+              </SubMenu>  
+
+               <Menu.Item key="htmlblock " onClick={() => setActiveTopic("htmlblock")}>
+               Html Block & Inline
+              </Menu.Item> 
+
+               <Menu.Item key="div " onClick={() => setActiveTopic("div")}>
+                 Html  Div
+              </Menu.Item> 
+
+              <Menu.Item key="class " onClick={() => setActiveTopic("class")}>
+                 Html  Class
+              </Menu.Item> 
+
+               <Menu.Item key="id" onClick={() => setActiveTopic("id")}>
+                 Html Id
+              </Menu.Item> 
+              
+              <Menu.Item key="iframes" onClick={() => setActiveTopic("iframes")}>
+                 Html Iframes
+              </Menu.Item> 
+
+              <Menu.Item key="JavaScript" onClick={() => setActiveTopic("JavaScript")}>
+                 Html JavaScript
+              </Menu.Item> 
+
+               <Menu.Item key="Filepaths" onClick={() => setActiveTopic("Filepaths")}>
+                 Html File paths
+              </Menu.Item> 
+
+              <Menu.Item key="head" onClick={() => setActiveTopic("head")}>
+                 Html Head
+              </Menu.Item> 
+               
+              
+              <Menu.Item key="htmlayout" onClick={() => setActiveTopic("htmlayout")}>
+                 Html Layout
+              </Menu.Item> 
+
+               <Menu.Item key="responsive" onClick={() => setActiveTopic("responsive")}>
+                 Html Responsive
+              </Menu.Item> 
+
+               <Menu.Item key="semantic" onClick={() => setActiveTopic("semantic")}>
+                 Html Semantic
+              </Menu.Item> 
+
+               <Menu style={{marginLeft:50, color:"green"}}>
+                <h4 >HTML FORM</h4>
+              </Menu> 
+
+               <Menu.Item key="form" onClick={() => setActiveTopic("form")}>
+                 Form
+              </Menu.Item> 
+             
+              <Menu.Item key="formattribute" onClick={() => setActiveTopic("formattribute")}>
+                 Form Attribute
+              </Menu.Item> 
+
+               <Menu.Item key="formelement" onClick={() => setActiveTopic("formelement")}>
+                 Form Element
+              </Menu.Item>
+
+              <Menu.Item key="inputtype" onClick={() => setActiveTopic("inputtype")}>
+                 Form Tnput Type
+              </Menu.Item> 
+
+              <Menu.Item key="inputattributes" onClick={() => setActiveTopic("inputattributes")}>
+                 Input Attributes
+              </Menu.Item> 
+
+              <Menu style={{marginLeft:50, color:"green"}}>
+                <h4 >HTML Graphics</h4>
+              </Menu> 
+
+              <Menu.Item key="canvas" onClick={() => setActiveTopic("canvas ")}>
+                HTML Canvas
+              </Menu.Item> 
+              
 
 
 
+             
+              </SubMenu>
+             
 
-
-          </SubMenu>
 
           <SubMenu
             key="css"
