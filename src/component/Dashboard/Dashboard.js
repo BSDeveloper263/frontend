@@ -20,7 +20,14 @@ import {
 } from "@ant-design/icons";
 
 import Introduction from "../Html/Introduction/Introduction";
-import Element from "../Html/Element/Element"; // ✅ correct import
+import Element from "../Html/Element/Element";
+import Attribute from "../Html/Attribute";
+import Headings from "../Html/Heading";
+import Image from "../Html/Images";
+import Paragraph from "../Html/Paragraph";
+import Link from "../Html/Link";
+import Style from "../Html/Style";
+import Formatting from "../Html/Formatting";
 
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
@@ -33,6 +40,13 @@ export default function DashboardLayout() {
   const htmlTopics = {
     introduction: <Introduction />,
     element: <Element />,
+    attribute: <Attribute />,
+    headings: <Headings />,
+    images: <Image />,
+    paragraph: <Paragraph />,
+    link: <Link />,
+    style: <Style />,
+    formatting: <Formatting />,
   };
 
   const dropdownMenu = (
@@ -120,10 +134,33 @@ export default function DashboardLayout() {
               HTML Elements
             </Menu.Item>
 
-            <Menu.Item key="attributes">Attributes</Menu.Item>
-            <Menu.Item key="headings">Headings</Menu.Item>
-            <Menu.Item key="paragraphs">Paragraphs</Menu.Item>
-            <Menu.Item key="links">Links</Menu.Item>
+            <Menu.Item key="attribute" onClick={() => setActiveTopic("attribute")}>
+              HTML Attributes
+            </Menu.Item>
+
+            <Menu.Item key="headings" onClick={() => setActiveTopic("headings")}>
+              HTML Headings
+            </Menu.Item>
+
+            <Menu.Item key="images" onClick={() => setActiveTopic("images")}>
+              HTML Images
+            </Menu.Item>
+
+            <Menu.Item key="paragraph" onClick={() => setActiveTopic("paragraph")}>
+              HTML Paragraph
+            </Menu.Item>
+
+            <Menu.Item key="link" onClick={() => setActiveTopic("link")}>
+              HTML Links
+            </Menu.Item>
+
+            <Menu.Item key="style" onClick={() => setActiveTopic("style")}>
+              HTML Style
+            </Menu.Item>
+
+            <Menu.Item key="formatting" onClick={() => setActiveTopic("formatting")}>
+              HTML Formatting
+            </Menu.Item>
           </SubMenu>
 
           <SubMenu
