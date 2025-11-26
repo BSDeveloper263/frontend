@@ -176,7 +176,7 @@ export default function CanvasTutorial() {
           <li>Game development friendly</li>
           <li>Animation support</li>
           <li>Chart creation</li>
-          {/* <li>Pixel-level control</li> */}
+          <li>Pixel-level control</li>
         </ul>
 
         <hr />
